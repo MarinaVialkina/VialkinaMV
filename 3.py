@@ -1,10 +1,6 @@
-age=int(input('Возраст:'))
-name=input('Имя:')
-if age>0 and age<75 and name!='Иван':
-    if age>=16:
-        print('Поздравляем, вы поступили во ВГУИТ!')
-    else:
-         print('Сначала нужно окончить школу.')
-         print('Сколько лет осталось учиться в школе?',16-age)
-else:
-    print('Ошибка.')
+import math
+x=3.74*10**-2
+y=-0.825
+z=0.16*10**2
+s=(1+(math.sin(x+y))**2)/(abs(x-(2*y)/(1+x**2*y**2)))*x**abs(y)+(math.cos(math.atan(1/z)))**2
+print(s)
