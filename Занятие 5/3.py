@@ -1,6 +1,12 @@
+def f(n,stepen):
+    while ((2**stepen)<=n):
+        stepen=stepen+1
+    return stepen
+    
+
+
 n=int(input('n:'))
 stepen=1
-while (2**stepen<n):
-    stepen+=1
-stepen=stepen-1
-print('Показатель степень:',stepen,'Степень:',2**stepen)
+stepenn=f(n,stepen)
+stepenn=stepenn-1
+print('Показатель степень:',stepenn,'Степень:',2**stepenn)
