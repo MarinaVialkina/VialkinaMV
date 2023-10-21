@@ -14,6 +14,7 @@ kolvo_slov=stroka.count(' ')+1
 slovo=''
 index_probela=stroka.find(' ')
 stroka_new=sort_slov(kolvo_slov, index_probela, stroka)
+
 print(stroka_new)
 
 

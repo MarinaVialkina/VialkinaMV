@@ -5,6 +5,8 @@ def f(a,pr,k):
             k+=1
         pr=a
     return k
+
+
 a=int(input('Ввод числа:'))
 pr=a
 k=0
