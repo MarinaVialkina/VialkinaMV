@@ -1,4 +1,5 @@
 def f(n,stepen):
+    """Функция находит наибольшую целую степень двойки, не превосходящую N."""
     while ((2**stepen)<=n):
         stepen=stepen+1
     return stepen

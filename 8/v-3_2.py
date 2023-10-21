@@ -1,4 +1,4 @@
-def sort_slov(kolvo_slov, index_probela, stroka):
+def sort_slov(kolvo_slov, index_probela, stroka, stroka_new):
     """Функция сортрует каждое слово строки отдельно по алфавиту """
     for i in range (kolvo_slov):
         index_probela=stroka.find(' ')
@@ -8,13 +8,12 @@ def sort_slov(kolvo_slov, index_probela, stroka):
     return(stroka_new)
 
 
-stroka=str(input('Вод строки:'))+' '
+stroka=str(input('Ввод строки:'))+' '
 stroka_new=''
 kolvo_slov=stroka.count(' ')+1
 slovo=''
 index_probela=stroka.find(' ')
-stroka_new=sort_slov(kolvo_slov, index_probela, stroka)
-
+stroka_new=sort_slov(kolvo_slov, index_probela, stroka, stroka_new)
 print(stroka_new)
 
 
