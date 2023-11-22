@@ -5,8 +5,7 @@ def enter_matrix():
     for i in range(n):
         b=[]
         for j in range(m):
-            print('Введите [',i,',',j,'] элемент:')
-            b.append(float(input()))
+                b.append(int(file_vvod.readline()))
         matrica.append(b)
     return matrica
 def max_element():
@@ -25,10 +24,15 @@ def max_element():
 
 n=int(input('Ввод числа n(кол-ва строк):'))
 m=int(input('Ввод числа m(кол-ва столбцов):'))
-matrica=enter_matrix()
-print('\n'.join('\t'.join(map(str, row))for row in matrica),'\n')
+with open(r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_2\VialkinaMarinaVladimirovna_Y233_vvod.txt') as file_vvod:
+    matrica=enter_matrix()
+with open(r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_2\VialkinaMarinaVladimirovna_Y233_vivod.txt','a') as file_vivod:
+    file_vivod.write('\n\n\n')
+    file_vivod.write('\n'.join('\t'.join(map(str, row))for row in matrica))
+    file_vivod.write('\n\n')
 maximum=max_element()
 matrica[0], matrica[maximum[0]] = matrica[maximum[0]], matrica[0]   #Меняет местами строки
 for j in range(n):  #Меняет местами столбцы
     matrica[j][0],matrica[j][maximum[1]]=matrica[j][maximum[1]],matrica[j][0]
-print('\n'.join('\t'.join(map(str, row))for row in matrica))
+with open(r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_2\VialkinaMarinaVladimirovna_Y233_vivod.txt','a') as file_vivod:
+    file_vivod.write('\n'.join('\t'.join(map(str, row))for row in matrica))
