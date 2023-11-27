@@ -34,6 +34,7 @@ def function_2():
 sg.theme('DarkTeal6')
 font = ("Comic Sans MS", 20)    #Шрифт заголовка
 font_2 = ("Comic Sans MS", 17)  #Шрифт основного текста
+#img = Image.open(r'11_PySimpleGui\Image1.png')
 layout = [[sg.Text('Получение JSON', font=font)],
         [sg.Text('Ввод имени репозитория', size=(22, 1), font=font_2), sg.InputText(key='-IN-', size=(48, 1), font=font_2)],
         [sg.Button('Ввод', font=font_2), sg.Button('Ещё раз', font=font_2), sg.Button('Отмена', font=font_2)],
@@ -43,7 +44,7 @@ layout = [[sg.Text('Получение JSON', font=font)],
         [sg.Text('id', size=(22, 1), font=font_2), sg.InputText(key='OUT4', size=(38, 1), font=font_2)],
         [sg.Text('name', size=(22, 1), font=font_2), sg.InputText(key='OUT5', size=(38, 1), font=font_2)],
         [sg.Text('url', size=(22, 1), font=font_2), sg.InputText(key='OUT6', size=(38, 1), font=font_2)],
-        [sg.Image('11\Image1.png')]]
+        [sg.Image(filename='11_PySimpleGui\Image1.png')]]
 
 window = sg.Window('', layout, size=(1000, 700))
 while True:
@@ -58,4 +59,3 @@ while True:
         function_2()
         k = 0
 window.close()
-
