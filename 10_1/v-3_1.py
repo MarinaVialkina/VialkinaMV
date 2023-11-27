@@ -16,16 +16,16 @@ def symmetric(count):
             if matrica[stolb][strok]==matrica[strok][stolb]:
                 count+=1
     if count==k:
-        with open(r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_1\VialkinaMarinaVladimirovna_Y233_vivod.txt', 'a') as file_vivod:
+        with open(r'10_1\VialkinaMarinaVladimirovna_Y233_vivod.txt', 'a') as file_vivod:
             file_vivod.write('Матрица симметрична.\n')
     else:
-        with open(r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_1\VialkinaMarinaVladimirovna_Y233_vivod.txt', 'a') as file_vivod:
+        with open(r'10_1\VialkinaMarinaVladimirovna_Y233_vivod.txt', 'a') as file_vivod:
             file_vivod.write('Матрица несимметрична.\n')
 
 
 n=int(input('Ввод числа n:'))
 k=n**2-n    # Кол-во чисел матрицы, которых не пересекает главная диагональ.
 count=0
-with open (r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_1\VialkinaMarinaVladimirovna_Y233_vvod.txt') as file_vvod:
+with open (r'10_1\VialkinaMarinaVladimirovna_Y233_vvod.txt') as file_vvod:
     matrica=enter_matrix()
 symmetric(count)

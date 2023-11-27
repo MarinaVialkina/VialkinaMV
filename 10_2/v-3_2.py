@@ -24,9 +24,9 @@ def max_element():
 
 n=int(input('Ввод числа n(кол-ва строк):'))
 m=int(input('Ввод числа m(кол-ва столбцов):'))
-with open(r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_2\VialkinaMarinaVladimirovna_Y233_vvod.txt') as file_vvod:
+with open(r'10_2\VialkinaMarinaVladimirovna_Y233_vvod.txt') as file_vvod:
     matrica=enter_matrix()
-with open(r'C:\Users\stadm-DenisP\Desktop\VialkinaMV\10_2\VialkinaMarinaVladimirovna_Y233_vivod.txt','a') as file_vivod:
+with open(r'10_2\VialkinaMarinaVladimirovna_Y233_vivod.txt','a') as file_vivod:
     file_vivod.write('\n\n\n')
     file_vivod.write('\n'.join('\t'.join(map(str, row))for row in matrica))
     file_vivod.write('\n\n')
