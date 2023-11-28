@@ -17,6 +17,13 @@ def get_txt():
             vivod4=Label(window, text=('id: ' + str(VisualStudioCode['id'])), font=('Comic Sans MS', 20), fg='#ede7df',bg='#705f46', width=20, anchor='w').grid(column=0, row=7)
             vivod5=Label(window, text=('name:   ' + str(VisualStudioCode['name'])), font=('Comic Sans MS', 20), fg='#ede7df',bg='#705f46', width=20, anchor='w').grid(column=0, row=8)
             vivod6=Label(window, text=('url:    ' + str(VisualStudioCode['url'])), font=('Comic Sans MS', 20), fg='#ede7df',bg='#705f46', width=41, anchor='w').grid(column=0, row=9, columnspan=2)
+            with open('file_vivod.txt', 'w') as file:
+                file.write('company:    ' + str(VisualStudioCode['company']))
+                file.write('\ncreated_at: ' + str(VisualStudioCode['created_at']))
+                file.write('\nemail:  ' + str(VisualStudioCode['email']))
+                file.write('\nid: ' + str(VisualStudioCode['id']))
+                file.write('\nname:   ' + str(VisualStudioCode['name']))
+                file.write('\nurl:    ' + str(VisualStudioCode['url']))
         else:
             vivod1=Label(window, text=('Имя репозитория введено не правильно!'), font=('Comic Sans MS', 20), fg='#ede7df',bg='#705f46', width=41, anchor='w').grid(column=0, row=4, columnspan=2)
             vivod2=Label(window, text=('(Посмотрите подсказку)'), font=('Comic Sans MS', 20), fg='#ede7df',bg='#705f46', width=41, anchor='w').grid(column=0, row=5, columnspan=2)
